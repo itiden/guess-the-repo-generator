@@ -31,21 +31,19 @@ function getRepos(page) {
     })
     .then(json => {
       if (json && json.items) {
-        repos.push(
-          json.items.filter(i => !i.fork).map(i => ({
+        json.items
+          .filter(i => !i.fork)
+          .map(i => ({
             full_name: i.full_name,
             description: i.description,
             stargazers_count: i.stargazers_count,
             watchers_count: i.watchers_count,
             language: i.language,
-            created_at: i.created_at,
+            created_at: i.created_at
           }))
-        );
+          .forEach(repo => repos.push(repo));
       }
-      return sleep(10000);
-    })
-    .then(() => {
-      if (page < 50) {
+      if (page < 10) {
         getRepos(page + 1);
       } else {
         saveJson();
