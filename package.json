@@ -6,7 +6,7 @@
   "author": "Andreas Bergqvist <andreas@itiden.se>",
   "license": "MIT",
   "dependencies": {
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "sleep-promise": "^8.0.1"
   }
 }
