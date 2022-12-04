@@ -5,8 +5,9 @@
   "repository": "git@github.com:andreasbergqvist/guess-the-repo-generator.git",
   "author": "Andreas Bergqvist <andreas@itiden.se>",
   "license": "MIT",
+  "type": "module",
   "dependencies": {
-    "node-fetch": "^2.6.7",
-    "sleep-promise": "^8.0.1"
+    "node-fetch": "^3.3.0",
+    "sleep-promise": "^9.1.0"
   }
 }
